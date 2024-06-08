@@ -1,0 +1,10 @@
+- RestFull Api
+- Http caching
+- Oauth 2.0
+- Pagination
+- Rate Limiting
+- Idempotency
+- HATEOAS
+- Error Handiling
+- Role Basead Acess Control
+- TDD: unit and integration
