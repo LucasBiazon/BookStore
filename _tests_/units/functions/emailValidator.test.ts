@@ -1,4 +1,4 @@
-import { emailValidator } from "../../src/utils/emailValidator";
+import { emailValidator } from "../../../src/utils/emailValidator";
 
 
 describe("Email verification", () => {

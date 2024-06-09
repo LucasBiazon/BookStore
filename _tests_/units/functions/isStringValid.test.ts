@@ -1,4 +1,4 @@
-import { isStringValid } from "../../src/utils/isStringValid";
+import { isStringValid } from "../../../src/utils/isStringValid";
 
 describe('String  lenght validator', () => {
   it('should return true string validator', () => {

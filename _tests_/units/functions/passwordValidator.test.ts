@@ -1,4 +1,4 @@
-import { passwordValidator } from "../../src/utils/passwordValidator";
+import { passwordValidator } from "../../../src/utils/passwordValidator";
 
 
 describe('Password validator', () => {
