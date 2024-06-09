@@ -13,64 +13,12 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Book {
-  id          String     @id @default(uuid())
-  isbn        String     @unique
-  title       String
-  pages       Int
-  publishedAt DateTime   @default(now())
-  language    String
-  contentBook String
-  author      Author     @relation(fields: [authorId], references: [id])
-  publisher   Publisher? @relation(fields: [publisherId], references: [id])
-  authorId    String
-  publisherId String
-
-  @@index([title], name: "book_title_index")
-}
-
-model Category {
-  id          String @id @default(uuid())
-  name        String @unique
-  description String
-}
-
-model Author {
-  id          String   @id @default(uuid())
-  name        String
-  email       String   @unique
-  password    String
-  birth_date  DateTime
-  nationality String
-  biography   String
-  creatAt     String
-  role        Role     @default(AUTHOR)
-  Book        Book[]
-
-  @@index([name], name: "author_name_index")
-}
-
-model Publisher {
-  id      String @id @default(uuid())
-  name    String
-  adress  String
-  website String
-  Book    Book[]
-
-  @@index([name], name: "publisher_name_index")
-}
-
 model User {
   id          String   @id @default(uuid())
   name        String
   email       String   @unique
   password    String
   description String
-  role        Role     @default(USER)
+  role        String   @default("user")
   creatAt     DateTime @default(now())
-}
-
-enum Role {
-  USER
-  AUTHOR
 }
