@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "jest "
+    "test": "jest /home/lucas/bookstore/_tests_/units/entities/user.test.ts"
   },
   "keywords": [],
   "author": "Lucas Biazon Palma",
